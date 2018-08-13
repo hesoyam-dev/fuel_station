@@ -1,11 +1,12 @@
 require 'ruby-progressbar'
 
 class Pump
-  attr_accessor :pump_id, :busy
+  attr_accessor :pump_id, :busy, :cars
 
   def initialize(pump_id:, busy: false)
     @pump_id = pump_id
     @busy    = busy
+    @cars    = []   
   end
 
   def busy?
@@ -18,6 +19,5 @@ class Pump
       fueling.increment
       sleep 0.01
     end
-    print("\n")
   end
 end
