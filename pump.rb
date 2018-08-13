@@ -6,7 +6,7 @@ class Pump
   def initialize(pump_id:, busy: false)
     @pump_id = pump_id
     @busy    = busy
-    @cars    = []   
+    @cars    = []
   end
 
   def busy?
@@ -14,7 +14,7 @@ class Pump
   end
 
   def fuel_car(model_name, tank)
-    fueling = ProgressBar.create(title: "PUMP: #{@pump_id} || #{model_name} / #{tank}", starting_at: 0, total: tank)
+    fueling = ProgressBar.create(title: "⛽️ # PUMP: #{@pump_id} || #{model_name} / #{tank}", starting_at: 0, total: tank)
     tank.times do
       fueling.increment
       sleep 0.01

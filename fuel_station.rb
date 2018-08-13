@@ -55,7 +55,7 @@ station.pumps.each do |pump|
     pump.cars.each do |car|
       pump.fuel_car(car.model_name, car.tank)
     end
-  end
+  end  
 end
 
 threads.each(&:join)
